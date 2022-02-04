@@ -1,38 +1,202 @@
+body {
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+    background-color: #F9FAFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 1.5rem;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: 0 0 0.2rem grey; 
+
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-primary); 
+    border-radius: 14px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-light); 
+  }
+
+html {
+    font-size: 62.5%;
+}
+
+*,*::before,*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primary: #eb2f64;
+    --color-primary-light: #FF3366;
+    --color-primary-dark: #BA265D;
+    
+     --color-grey-light-1: #faf9f9;
+     --color-grey-light-2: #f4f2f2;
+     --color-grey-light-3: #f0eeee;
+     --color-grey-light-4: #ccc;
+
+     --color-grey-dark-1: #333;
+     --color-grey-dark-2: #777;
+     --color-grey-dark-3: #999;
+
+     --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+     --shadow-mid: 2px 4px .5rem rgba(0,0,0, .25);
+     --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+     --line: 1px solid var(--color-grey-light-2);;
+}
+
+
+#app {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .App {
-  text-align: center;
+    position: absolute;
+    top: 30%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*           FORM               */
+.search {
+    position: relative;
+    display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search__input {
+    background-color: #FFFFFf;
+    box-shadow: var(--shadow-mid);
+    border: none;
+    border-radius: 100px;
+    min-width: 45rem;
+    min-height: 5rem;
+    padding: 2rem 3rem;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--color-grey-dark-2);
+
+
+    transition: all .3s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.search__input:focus {
+    outline: none;
+   
+ 
 }
 
-.App-link {
-  color: #61dafb;
+.search__input::-webkit-input-placeholder {
+    color: var(--color-grey-light-4);
+    font-size: 1.6rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search__button {
+    position: relative;
+    left: -5rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 1rem;
+}
+
+.search__button__icon {
+   font-size: 2rem;
+   color: var(--color-primary-light);
+   transition: color .3s;
+}
+
+.search__button:hover .search__button__icon {
+    color: var(--color-primary-dark);
+}
+
+
+/*                                    BOOKS                     */ 
+.books {
+    min-height: 20rem;
+    max-width: 45rem;
+    margin-top: 3rem;
+    margin-right: auto;
+}
+
+.book:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+.book {
+    display: flex;
+    align-items: center;
+
+    background-color: #fff;
+    box-shadow: var(--shadow-mid);
+    border-radius: 1rem;
+    height: 15rem;
+    width: 50rem;
+    overflow: hidden;
+}
+
+.book__title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: red;
+    color: var(--color-grey-dark-1);
+    font-family: serif;
+}
+
+.book__author {
+    color: var(--color-light-4);
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-family: sans-serif;
+}
+
+.book__photo-box {
+    flex: 0 0 20%;
+    height: 100%;
+    margin-right: 3rem;
+}
+
+.book__text-box {
+    display: flex;
+    flex: 0 0 50%;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 3rem;
+    overflow: hidden;
+    height: 85%;
+}
+
+.book__rating-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-primary);
+    padding: 0.7 1rem;
+
+
+    font-family: sans-serif;
+    font-size: 1.6rem;
+
+    color: #fff;
 }
