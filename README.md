@@ -1,4 +1,4 @@
-# A simple to Do List app
+# A search engine for books
 **Welcome to this prodject page!👋**
 
 ### A littlebit about the project
