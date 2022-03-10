@@ -1,5 +1,5 @@
 # A search engine for books
-**Welcome to this prodject page!👋**
+**Welcome to this project page!👋**
 
 ### A littlebit about the project
 I wanted to make a project with an API, but i didn't have any inspiration then i found the [Google Books API](https://developers.google.com/books/docs/v1/using) and i came up to make and search engine to find books.
